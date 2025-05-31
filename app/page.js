@@ -209,7 +209,7 @@ You'll Need It
       <main className="max-w-7xl mx-auto px-4 pb-12">
         <div className="flex justify-between items-center mb-8">
           <h3 className="text-2xl font-bold text-gray-900">
-            Featured Wallets ({products.length}+ products)
+            Featured Products ({products.length}+ products)
           </h3>
           <div className="text-sm text-gray-500">
             Showing {products.length} of ∞ products
