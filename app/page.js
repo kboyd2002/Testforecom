@@ -11,9 +11,9 @@ const WalletStore = () => {
 
   // Generate placeholder products
   const generateProducts = (startId, count) => {
-    const categories = ['Leather Wallets', 'Minimalist Wallets', 'Smart Wallets', 'Card Holders', 'Money Clips', 'Travel Wallets'];
-    const brands = ['WalletCo', 'SlimFold', 'Ridge', 'Bellroy', 'Secrid', 'Distil Union'];
-    const colors = ['Black', 'Brown', 'Navy', 'Charcoal', 'Tan', 'Olive'];
+    const categories = ['Test'];
+    const brands = ['Test'];
+    const colors = ['test'];
     
     return Array.from({ length: count }, (_, i) => {
       const id = startId + i;
@@ -85,7 +85,7 @@ const WalletStore = () => {
   };
 
   const ProductCard = ({ product }) => (
-    <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group overflow-hidden">
+    <div className="bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group overflow-hidden border border-gray-800">
       <div className="relative overflow-hidden">
         <img 
           src={product.image} 
@@ -98,7 +98,7 @@ const WalletStore = () => {
             className={`p-2 rounded-full backdrop-blur-sm transition-all ${
               favorites.has(product.id) 
                 ? 'bg-red-500 text-white' 
-                : 'bg-white/80 text-gray-600 hover:bg-red-500 hover:text-white'
+                : 'bg-black/80 text-gray-300 hover:bg-red-500 hover:text-white'
             }`}
           >
             <Heart size={16} fill={favorites.has(product.id) ? "currentColor" : "none"} />
@@ -113,11 +113,11 @@ const WalletStore = () => {
       
       <div className="p-6">
         <div className="mb-2">
-          <span className="text-sm text-blue-600 font-semibold">{product.brand}</span>
-          <span className="text-xs text-gray-500 ml-2">{product.category}</span>
+          <span className="text-sm text-blue-400 font-semibold">{product.brand}</span>
+          <span className="text-xs text-gray-400 ml-2">{product.category}</span>
         </div>
         
-        <h3 className="font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors">
+        <h3 className="font-bold text-white mb-3 line-clamp-2 group-hover:text-blue-400 transition-colors">
           {product.name}
         </h3>
         
@@ -127,10 +127,10 @@ const WalletStore = () => {
               <Star 
                 key={i} 
                 size={14} 
-                className={i < Math.floor(product.rating) ? "text-yellow-400 fill-current" : "text-gray-300"}
+                className={i < Math.floor(product.rating) ? "text-yellow-400 fill-current" : "text-gray-600"}
               />
             ))}
-            <span className="ml-2 text-sm text-gray-600">
+            <span className="ml-2 text-sm text-gray-300">
               {product.rating} ({product.reviews.toLocaleString()})
             </span>
           </div>
@@ -138,7 +138,7 @@ const WalletStore = () => {
         
         <div className="flex flex-wrap gap-1 mb-4">
           {product.features.map((feature, index) => (
-            <span key={index} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full">
+            <span key={index} className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">
               {feature}
             </span>
           ))}
@@ -146,9 +146,9 @@ const WalletStore = () => {
         
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-gray-900">${product.price}</span>
+            <span className="text-2xl font-bold text-white">${product.price}</span>
             {product.originalPrice > product.price && (
-              <span className="text-lg text-gray-500 line-through">${product.originalPrice}</span>
+              <span className="text-lg text-gray-400 line-through">${product.originalPrice}</span>
             )}
           </div>
         </div>
@@ -168,9 +168,9 @@ const WalletStore = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="min-h-screen bg-black">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+      <header className="bg-black/80 backdrop-blur-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
@@ -178,26 +178,21 @@ const WalletStore = () => {
                      width={500}
                      height={500}
               ></img>
-              {/* <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
-                <ShoppingBag className="text-white" size={24} />
-              </div> */}
               <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                </h1>
               </div>
             </div>
             <div className="text-right">
-              <p className="text-sm text-gray-600">Affiliate Store</p>
-              <p className="text-xs text-gray-500">We earn from qualifying purchases</p>
+              <p className="text-sm text-gray-300">Affiliate Store</p>
+              <p className="text-xs text-gray-400">We earn from qualifying purchases</p>
             </div>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="py-12 px-4">
+      <section className="py-12 px-4 bg-black">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-black">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-white">
           We Get It, Go Grab Your Wallet Dude.
 <br></br>
 You'll Need It
@@ -206,12 +201,12 @@ You'll Need It
       </section>
 
       {/* Products Grid */}
-      <main className="max-w-7xl mx-auto px-4 pb-12">
-        <div className="flex justify-between items-center mb-8">
-          <h3 className="text-2xl font-bold text-gray-900">
+      <main className="max-w-7xl mx-auto px-4 pb-12 bg-black">
+        <div className="flex justify-between items-center mb-8 bg-black">
+          <h3 className="text-2xl font-bold text-white bg-black">
             Featured Products ({products.length}+ products)
           </h3>
-          <div className="text-sm text-gray-500">
+          <div className="text-sm text-gray-400">
             Showing {products.length} of ∞ products
           </div>
         </div>
@@ -224,16 +219,16 @@ You'll Need It
         
         {loading && (
           <div className="mt-12 text-center">
-            <div className="inline-flex items-center gap-3 bg-white rounded-full px-6 py-3 shadow-lg">
+            <div className="inline-flex items-center gap-3 bg-gray-900 rounded-full px-6 py-3 shadow-lg border border-gray-800">
               <div className="animate-spin rounded-full h-5 w-5 border-2 border-blue-600 border-t-transparent"></div>
-              <span className="text-gray-700 font-medium">Loading more Products...</span>
+              <span className="text-gray-300 font-medium">Loading more Products...</span>
             </div>
           </div>
         )}
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 px-4">
+      <footer className="bg-gray-900 text-white py-8 px-4 border-t border-gray-800">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-gray-400 mb-2">
             © 2025 Dude, Where's My Wallet? - Affiliate Store
