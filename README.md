@@ -36,8 +36,8 @@ Visit the live store:
 
 1. **Clone the repository**
    ```bash
-   git clone [your-repo-url]
-   cd wallet-storee
+   git clone (https://github.com/kboyd2002/Testforecom/)
+   cd Testforecom
    ```
 
 2. **Install dependencies**
