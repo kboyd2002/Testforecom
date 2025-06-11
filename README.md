@@ -8,16 +8,15 @@
 
 ### 🌟 Key Features
 
-- **🛒 Real Amazon Products** - 24+ authentic products with verified affiliate links
 - **♾️ Infinite Scroll** - Seamless product browsing experience
 - **📱 Fully Responsive** - Perfect on desktop, tablet, and mobile
 - **⚡ Lightning Fast** - Built with Next.js 15 and optimized performance
 - **🎨 Modern UI** - Dark theme with gradient accents and smooth animations
-- **💰 Revenue Ready** - All affiliate links properly configured for commissions
+
 
 ## 🚀 Live Demo
 
-Visit the live store: [Your Domain Here]
+Visit the live store: 
 
 ## 🛠️ Tech Stack
 
@@ -117,14 +116,8 @@ This store is fully integrated with the **Amazon Associates Program**:
 
 ## 📊 Product Database
 
-The store features **24 real products** across multiple categories:
+The store features **DUDE PRODUCTS** across multiple categories:
 
-- 🍬 **Candy & Snacks** - Premium treats and favorites
-- 🏠 **Home & Security** - Practical household items
-- 🥩 **Gourmet Food** - High-end culinary products
-- 🎮 **Gaming & Electronics** - Latest tech and gadgets
-- 🏃 **Sports & Outdoors** - Adventure and fitness gear
-- 🎯 **Toys & Games** - Entertainment and collectibles
 
 ## 🔧 Customization
 
